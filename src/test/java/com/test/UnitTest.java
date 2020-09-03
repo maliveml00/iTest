@@ -1,3 +1,4 @@
+/*测试main中Demo1中的函数返回值是否正确*/
 package com.test;
 
 import com.example.Demo1;
@@ -12,13 +13,13 @@ import java.util.Random;
 public class UnitTest {
     @Test
     public void testAddInt(){
-        int a = new Random().nextInt(1000);
-        int b = new Random().nextInt(2000);
+        int a = new Random().nextInt(1000);/*随机生成1000以内的整型数*/
+        int b = new Random().nextInt(2000);/*随机生成2000以内的整型数*/
 
         int c = a + b;
-        int r = new Demo1().intAdd(a, b);
+        int r = new Demo1().intAdd(a, b);/*使用demo1中的intAdd函数算出一个r值*/
         Assert.assertTrue("检查intAdd(a, b)函数返回值是否正确", c == r);
-    }
+    }/*r值和c值相等，则intAdd(a, b)函数返回值正确,不相等，则返回错误*/
 
     @Test
     public void testSubtractInt(){
